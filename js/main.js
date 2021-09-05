@@ -1,1 +1,1 @@
-alert ("meu primeiro java script");
+alert ("Eu amo você!");
