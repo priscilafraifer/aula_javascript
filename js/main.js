@@ -29,3 +29,23 @@ function inverterfrase(){
     return x;  
 }
 
+function plusMinus(ar){
+
+    var propPos = 0;
+    var propNeg = 0;
+    var propZero = 0;
+
+    for (var i = 0; i < ar.length; i++){
+        if(ar[i] > 0){
+            propPos ++;
+        }else if(ar[i] < 0){
+            propNeg ++;
+        }else{
+            propZero ++;
+        }
+    }
+
+    document.write((propPos / ar.length) *100 + "%" + "<br>");
+    document.write((propNeg / ar.length) *100 + "%" + "<br>");
+    document.write((propZero / ar.length) *100 + "%" + "<br>");
+}
