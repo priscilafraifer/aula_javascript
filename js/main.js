@@ -49,3 +49,18 @@ function plusMinus(ar){
     document.write((propNeg / ar.length) *100 + "%" + "<br>");
     document.write((propZero / ar.length) *100 + "%" + "<br>");
 }
+
+function maiorMenor(ar){
+    menor = 0;
+    maior = 0;
+    
+    for (var i=0; i< ar.length; i++){
+        if(ar[i] < menor){
+            menor = ar[i];        
+        }else{
+            maior = ar[i];
+        }
+    }
+    document.write(menor + "<br>");
+    document.write(maior + "<br>");
+}
