@@ -25,7 +25,7 @@ function inverter(ar){
 }
 
 function inverterfrase(){
-    x = "Meu nome é Priscila".split('').reverse().join(''); 
+    x = "Meu nome é Camila".split('').reverse().join(''); 
     return x;  
 }
 
