@@ -16,7 +16,7 @@ function somavetor(ar){
     return soma;
 }
 
-function inverter(ar){
+function inverterlista(ar){
     var lista = [];
     for (var i = ar.length-1; i >= 0; i--){
         lista.push(ar[i]);
