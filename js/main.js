@@ -17,6 +17,7 @@ function somavetor(ar){
 }
 
 function inverterlista(ar){
+
     var lista = [];
     for (var i = ar.length-1; i >= 0; i--){
         lista.push(ar[i]);
@@ -87,3 +88,14 @@ function tamanholista(ar){
     document.write("Lista completa = [" + lista + "] --> Soma do tamanho de todas as Strings = " + soma + "<br>");
 }
 
+/* Inverte a palavra da lista e a ordem da lista também*/
+function inverterpalavra(ar){
+    var lista = [];
+    //for (var i = 0 ; i < ar.length; i ++){
+    for (var i = ar.length-1; i >= 0; i--){    
+    ar[i] = ar[i].split('').reverse().join(''); 
+    lista.push(ar[i]);    
+    }
+    
+    return lista;
+}
