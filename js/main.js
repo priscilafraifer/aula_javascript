@@ -61,6 +61,29 @@ function maiorMenor(ar){
             maior = ar[i];
         }
     }
-    document.write(menor + "<br>");
-    document.write(maior + "<br>");
+    document.write("O menor número é " + menor + "<br>");
+    document.write("O maior número é " + maior + "<br>");
 }
+
+function media(ar){
+    soma = 0;
+    media = 0;
+    for(var i = 0; i< ar.length; i++){
+        soma = soma + ar[i];        
+    }
+    media = soma / ar.length;
+    document.write(media);
+}
+
+function tamanholista(ar){
+    var lista = [];
+    soma = 0;
+    for (var i = 0 ; i < ar.length; i ++){
+        lista.push(ar[i]);
+        soma = soma + ar[i].length;
+        document.write("Índice " + i + " = " + ar[i] + " --> Tamanho da String = " + ar[i].length + "<br>");
+        
+    }
+    document.write("Lista completa = [" + lista + "] --> Soma do tamanho de todas as Strings = " + soma + "<br>");
+}
+
