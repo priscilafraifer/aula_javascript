@@ -121,4 +121,22 @@ function removerlista(ar){
     return lista;
 }
 
+function mediaponderada(){
 
+    arpeso = [1,2];
+    arvalor = [5,10];
+    x = 0;
+    y = 0;
+    mp = 0; 
+
+    for (var i = 0; i < arpeso.length; i++){
+        console.log(x = x + (arpeso[i] * arvalor[i]));
+        console.log(y = y + arpeso[i]);        
+       
+    }
+
+    mp = x/y;
+
+    document.write(mp);
+
+}
