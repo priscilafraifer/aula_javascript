@@ -88,7 +88,7 @@ function tamanholista(ar){
     document.write("Lista completa = [" + lista + "] --> Soma do tamanho de todas as Strings = " + soma + "<br>");
 }
 
-/* Inverte a palavra da lista e a ordem da lista também*/
+/* Inverte a ordem da palavra da lista e a ordem da lista também*/
 function inverterpalavra(ar){
     var lista = [];
     //for (var i = 0 ; i < ar.length; i ++){
@@ -99,3 +99,26 @@ function inverterpalavra(ar){
     
     return lista;
 }
+
+function mostrarlista(ar){
+    var n = prompt("Digite o valor de n: ");
+    for (var i = 0; i<n; i++){
+        document.write(ar[i] + "<br>");       
+    }
+}
+
+function removerlista(ar){
+    var lista = [];
+
+    var n = prompt("Digite o valor de n: ");
+
+    for (var i = 0; i<ar.length; i++){
+        lista.push(ar[i]);     
+    }   
+
+    lista.splice(0,n);
+    
+    return lista;
+}
+
+
