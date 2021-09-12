@@ -125,6 +125,42 @@ function removerlista(ar){
     return lista;
 }
 
+/**
+ * Faça uma função que receba um número n e
+ * uma lista arr, ela deverá remover
+ * os n primeiros elementos de arr.
+ */
+ function drop(n,arr){
+    if(n >= arr.length)
+        return [];
+    else{
+        var aux = [];
+        for(var i=n; i < arr.length; i++)
+            aux.push(arr[i]);
+        return aux;
+    }
+}
+
+function teste(){
+    document.write("1 ");
+    document.write(drop(0,"FATEC"));
+    document.write("<br>");
+    document.write("2 ");
+    document.write(drop(3,"FATEC"));
+    document.write("<br>");
+    document.write("3 ");
+    document.write(drop(4,"FATEC"));
+    document.write("<br>");
+    document.write("4 ");
+    document.write(drop(5,"FATEC"));
+    document.write("<br>");
+    document.write("5 ");
+    document.write(drop(6,"FATEC"));
+    document.write("<br>");
+    document.write("6 ");
+    document.write(drop(2,"FATEC"));
+}
+
 function mediaponderada(){
 
     arpeso = [1,2];
@@ -144,3 +180,4 @@ function mediaponderada(){
     document.write(mp);
 
 }
+
