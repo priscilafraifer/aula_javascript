@@ -116,7 +116,11 @@ function removerlista(ar){
         lista.push(ar[i]);     
     }   
 
-    lista.splice(0,n);
+   lista.splice(0,n);
+
+    /*for (var i = 0; i< n; i++){
+        lista.pop(ar[i]);
+    }*/
     
     return lista;
 }
