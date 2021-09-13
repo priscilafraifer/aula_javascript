@@ -52,16 +52,26 @@ function plusMinus(ar){
 }
 
 function maiorMenor(ar){
-    menor = 0;
-    maior = 0;
+    menor = ar[0];
+    maior = ar[0];
     
     for (var i=0; i< ar.length; i++){
+        
         if(ar[i] < menor){
             menor = ar[i];        
-        }else{
-            maior = ar[i];
         }
     }
+
+    
+    for (var i=0; i< ar.length; i++){
+        
+        if(ar[i] > maior){
+            maior = ar[i];        
+        }
+        
+    }
+
+    
     document.write("O menor número é " + menor + "<br>");
     document.write("O maior número é " + maior + "<br>");
 }
@@ -181,3 +191,159 @@ function mediaponderada(){
 
 }
 
+/*Lista 2*/
+
+function testeEx1(){
+    calcMedia([
+ {nome: "Item1", preco: 7.9, qtdVendida: 40}
+ ,{nome: "Item2", preco: 12, qtdVendida: 10}
+ ,{nome: "Item3", preco: 20, qtdVendida: 50}
+ ,{nome: "Item4", preco: 1.5, qtdVendida: 500}
+ ,{nome: "Item5", preco: 15, qtdVendida: 4}
+]);
+}
+
+function calcMedia(objs){
+    var soma = 0;
+    var media = 0;
+    for(var i=0; i < objs.length; i++){
+        soma = soma + objs[i].preco;
+    }
+    media = soma/objs.length;
+    document.write("A média é " + media + "<br>");
+
+}
+
+function testeEx2(){
+    calcmin([
+ {nome: "Item1", preco: 7.9, qtdVendida: 40}
+ ,{nome: "Item2", preco: 12, qtdVendida: 10}
+ ,{nome: "Item3", preco: 20, qtdVendida: 50}
+ ,{nome: "Item4", preco: 1.5, qtdVendida: 500}
+ ,{nome: "Item5", preco: 15, qtdVendida: 4}
+]);
+}
+
+function calcmin(objs){
+    
+    menor = objs[0].preco;
+    
+    //console.log(menor);     
+    
+    for (var i=0; i< objs.length; i++){
+        if(objs[i].preco < menor){
+            menor = objs[i].preco;                  
+        }   
+    
+    }
+
+    //return menor;
+    document.write("O menor número é " + menor + "<br>");
+}
+
+function testeEx3(){
+    calcmax([
+ {nome: "Item1", preco: 7.9, qtdVendida: 40}
+ ,{nome: "Item2", preco: 12, qtdVendida: 10}
+ ,{nome: "Item3", preco: 20, qtdVendida: 50}
+ ,{nome: "Item4", preco: 1.5, qtdVendida: 500}
+ ,{nome: "Item5", preco: 15, qtdVendida: 4}
+]);
+}
+
+function calcmax(objs){    
+    
+    maior = objs[0].preco;
+    //console.log(maior);
+    for (var i=0; i< objs.length; i++){
+        if(objs[i].preco > maior){
+            maior = objs[i].preco;                  
+        }    
+        
+    }    
+    //return maior;
+    document.write("O maior número é " + maior + "<br>");   
+}
+
+function testeEx4(){
+    listarnomes([
+ {nome: "Item1", preco: 7.9, qtdVendida: 40}
+ ,{nome: "Item2", preco: 12, qtdVendida: 10}
+ ,{nome: "Item3", preco: 20, qtdVendida: 50}
+ ,{nome: "Item4", preco: 1.5, qtdVendida: 500}
+ ,{nome: "Item5", preco: 15, qtdVendida: 4}
+]);
+}
+
+function listarnomes(objs){
+    var lista = [];
+    for (var i=0; i< objs.length; i++){           
+        lista = lista + objs[i].nome + ", ";
+    }
+    document.write(lista +"<br>");
+}
+
+function testeEx5(){
+    quantidadeprodutos([
+ {nome: "Item1", preco: 7.9, qtdVendida: 40}
+ ,{nome: "Item2", preco: 12, qtdVendida: 10}
+ ,{nome: "Item3", preco: 20, qtdVendida: 50}
+ ,{nome: "Item4", preco: 1.5, qtdVendida: 500}
+ ,{nome: "Item5", preco: 15, qtdVendida: 4}
+]);
+}
+
+function quantidadeprodutos(objs){
+    var quantidade = 0;
+    for (var i=0; i< objs.length; i++){           
+        //quantidade = quantidade + objs[i].qtdVendida;
+        quantidade = quantidade + 1;
+    }
+    document.write("A quantidade de produtos é " + quantidade + "<br>");
+}
+
+function testeEx6(){
+    lucrototal([
+ {nome: "Item1", preco: 7.9, qtdVendida: 40}
+ ,{nome: "Item2", preco: 12, qtdVendida: 10}
+ ,{nome: "Item3", preco: 20, qtdVendida: 50}
+ ,{nome: "Item4", preco: 1.5, qtdVendida: 500}
+ ,{nome: "Item5", preco: 15, qtdVendida: 4}
+]);
+}
+
+function lucrototal(objs){
+    var lucro = 0;
+    for (var i=0; i< objs.length; i++){           
+        lucro = lucro + objs[i].preco * objs[i].qtdVendida;
+        //console.log(lucro);
+    }
+    document.write("O lucro total de vendas é R$ " + lucro + "<br>");
+}
+
+function testeEx7(){
+    maiorqtdvendida([
+ {nome: "Item1", preco: 7.9, qtdVendida: 40}
+ ,{nome: "Item2", preco: 12, qtdVendida: 10}
+ ,{nome: "Item3", preco: 20, qtdVendida: 50}
+ ,{nome: "Item4", preco: 1.5, qtdVendida: 500}
+ ,{nome: "Item5", preco: 15, qtdVendida: 4}
+]);
+}
+
+function maiorqtdvendida(objs){    
+    
+    maior = objs[0].qtdVendida;
+    nomeproduto = "";
+    //console.log(maior);
+    for (var i=0; i< objs.length; i++){
+        if(objs[i].qtdVendida > maior){
+            maior = objs[i].qtdVendida; 
+            nomeproduto = objs[i].nome;               
+        }           
+        
+    }  
+    
+    //return maior;
+    document.write("O produto com maior quantidade vendida é o " + nomeproduto + " com " + maior + " vendas " + "<br>");   
+}
